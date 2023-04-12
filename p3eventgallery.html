@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            outline: 0px;
+            padding: 0px;
+    
+        }
+        .nav{
+            position: fixed;
+            width: 100%;
+            height: 14vh;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+            background-color: white;
+            z-index: 1;
+            align-items: center;
+            
+        }
+        .left_logo img{
+            width: 140px;
+            height: 80px;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight:600;
+            margin-left: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar div a{
+            padding-left: 30px;
+            text-decoration: none;
+            color: black;
+        }
+        .navbar div a:hover{
+            color:rgb(233, 104, 104);
+
+        }
+        .right_logo{
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            font-weight:600;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-right: 150px;
+        }
+        .right_logo div{
+            padding-right: 22px;
+        }
+        .nav .fa-sharp{
+            color:rgb(233, 104, 104);
+        }
+        .nav .fa-sharp:hover{
+            color: yellowgreen;
+        }
+        .nav .fa-brands{
+            font-size: 20px;
+            font-weight: bolder;
+            color:rgb(233, 104, 104);
+        }
+        .nav .fa-brands:hover{
+            color: yellowgreen;
+        }
+        .evgallery{
+            width: 100%;
+        }
+        .egheading h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            text-shadow: 0px 3px 5px gray;
+        }
+        .egheading span{
+            color:  rgb(233, 104, 104) ;
+        }
+        .egheading p{
+            font-size: 15px;
+            text-align: center;
+            padding: 20px 50px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .gallery{
+            width: 100%;
+            margin-top: 30px;
+            text-align: center ;
+        }
+        .gallery img{
+            width: 20%;
+            height: 30%;
+            border: 1px solid grey;     
+            transition: transform 5s;
+        
+        }
+        .gallery img:hover{
+            transform:scale(1.6,1.6);
+        }
+        .cont9{
+            width: 100%;
+            height: 22vh;
+            background: linear-gradient(rgba(166, 255, 0,0.8),rgba(15, 206, 15,0.9));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .take{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;            
+            line-height: 35px;
+            padding-left: 40px;
+        }
+        .submit{
+            width: 35%;
+            height: 9vh;
+            color: white;
+            margin-right: 40px;
+            border: 1px solid ;
+            border-radius: 50px;
+            background: transparent;
+        }
+        .cont9 .submit:hover{
+            background-color: white;
+            color: rgb(233, 104, 104);
+        }
+        .cont10{
+            width: 100%;
+            height: 60vh;
+            background: linear-gradient(rgba(19, 18, 18,0.9),rgba(17, 16, 16,0.8)),url("https://www.halton.com/wp-content/uploads/2020/05/Concert_hall_rock_concert-1366x668.jpg");
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .cont10>.impnote{
+            width: 30%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            text-align: justify;
+            font-size: 15px;
+        }
+        .impnote>h3{
+            padding-bottom: 15px;
+        }
+        .impnote>h3>span{
+            color: rgb(164, 235, 57);    
+        }
+        .cont10>.quicklink{
+            width: 15%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .quicklink>h3{
+            padding-bottom: 15px;
+        }
+        .quicklink>h3>span{
+            color: rgb(164, 235, 57);
+        }
+        .cont10 .quicklink div:hover{
+            color: rgb(233, 104, 104);
+            cursor: pointer;
+        }
+        .cont10>.artcategory{
+            width: 15%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .artcategory>h3{
+            padding-bottom: 15px;
+        }
+        .artcategory>h3>span{
+            color: rgb(164, 235, 57);
+        }
+        .cont10 .artcategory div:hover{
+            color: rgb(233, 104, 104);
+            cursor: pointer;
+        }
+        .cont10>.followus{
+            width: 18%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .followus>h3{
+            padding-bottom:15px;
+        }
+        .followus>h3>span{
+            color: rgb(164, 235, 57);
+        }
+        .cont10 .followus div{
+            font-size:xx-large;
+            color: white;
+            cursor: pointer;
+        }
+        .cont10 .followus div .fa-brands:hover{
+            color: rgb(233, 104, 104);
+            cursor: pointer;
+        }
+        .footer{
+            width: 100%;
+            height: 8vh;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 50px;
+            box-sizing: border-box;
+        }
+        .footer span:hover{
+            color: rgb(233, 104, 104);
+        }
+        .cont9{
+            width: 100%;
+            height: 22vh;
+            background: linear-gradient(rgba(166, 255, 0,0.8),rgba(15, 206, 15,0.9));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .take{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;            
+            line-height: 35px;
+            padding-left: 40px;
+        }
+        .submit{
+            width: 35%;
+            height: 9vh;
+            color: white;
+            margin-right: 40px;
+            border: 1px solid ;
+            border-radius: 50px;
+            background: transparent;
+        }
+        .cont9 .submit:hover{
+            background-color: white;
+            color: rgb(233, 104, 104);
+        }
+        .cont10{
+            width: 100%;
+            height: 60vh;
+            background: linear-gradient(rgba(19, 18, 18,0.9),rgba(17, 16, 16,0.8)),url("https://www.halton.com/wp-content/uploads/2020/05/Concert_hall_rock_concert-1366x668.jpg");
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .cont10>.impnote{
+            width: 30%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            text-align: justify;
+            font-size: 15px;
+        }
+        .impnote>h3{
+            padding-bottom: 15px;
+        }
+        .impnote>h3>span{
+            color: rgb(164, 235, 57);    
+        }
+        .cont10>.quicklink{
+            width: 15%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .quicklink>h3{
+            padding-bottom: 15px;
+        }
+        .quicklink>h3>span{
+            color: rgb(164, 235, 57);
+        }
+        .cont10 .quicklink div:hover{
+            color: rgb(233, 104, 104);
+            cursor: pointer;
+        }
+        .cont10>.artcategory{
+            width: 15%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .artcategory>h3{
+            padding-bottom: 15px;
+        }
+        .artcategory>h3>span{
+            color: rgb(164, 235, 57);
+        }
+        .cont10 .artcategory div:hover{
+            color: rgb(233, 104, 104);
+            cursor: pointer;
+        }
+        .cont10>.followus{
+            width: 18%;
+            height: 70%;
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .followus>h3{
+            padding-bottom:15px;
+        }
+        .followus>h3>span{
+            color: rgb(164, 235, 57);
+        }
+        .cont10 .followus div{
+            font-size:xx-large;
+            color: white;
+            cursor: pointer;
+        }
+        .cont10 .followus div .fa-brands:hover{
+            color: rgb(233, 104, 104);
+            cursor: pointer;
+        }
+        .footer{
+            width: 100%;
+            height: 8vh;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 50px;
+            box-sizing: border-box;
+        }
+        .footer span:hover{
+            color: rgb(233, 104, 104);
+        }
+</style>
+</head>
+<body>
+    <div class="nav">
+        <div class="left_logo"><img src="https://www.bookmyartistindia.com/wp-content/themes/bookmyartist/images/logo.png" alt="abc"></div>
+        <div class="navbar">
+            <div> <a href="index.html">Home</a></div>
+            <div><a href="p2aboutus.html">About Us</a></div>
+            <div> <a href="p3eventgallery.html">Event Gallery</a></div>
+            <div><a href="p4hirecelebrity.html">Hire a Celebrity</a></div>
+        </div>
+        <div class="right_logo">
+            <div class="phone"><i class="fa-sharp fa-solid fa-phone"></i>&nbsp;Call</div>
+            <div class="whatsapp"><i class="fa-brands fa-whatsapp"></i>&nbsp;Whatsapp</div>
+        </div>
+    </div>
+    <div class="evgallery">
+        <div class="egheading">
+            <h1>Book Celebrity, Singers, Music Bands <span>& More</span></h1>
+            <p>Book My Artist represents a mixture of leading and top-tier artists covering singers, musicians, bollywood & television celebrities for all kinds of </br>events.</p>
+        </div>
+        <div class="gallery">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/Azeem.jpeg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/PHOTO-2021-05-11-16-13-01-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-EV-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-BE-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-VC-4-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-B-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-VC-5-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-VC-2-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-VC-3-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-VC-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/05/BMA-Ev-1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/03/prashasti-copy-1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/anupam-300x125.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/02/Ravi-Pawar-Symphony-Band-14-300x125.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2018/11/18_1-300x108.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/02/Karan-Wahi-copy-300x125.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2018/11/19-300x108.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/02/dj-yogi-13-300x125.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2018/11/20-300x108.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/02/Salim-Suleiman-copy-300x125.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/03/neet-copy-1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/PHOTO-2019-09-21-17-41-57-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/10/PHOTO-2019-10-22-16-14-58_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/10/PHOTO-2019-10-22-16-14-58_2-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/10/PHOTO-2019-10-15-14-02-47-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/PHOTO-2019-09-19-17-49-37-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/PHOTO-2019-09-19-17-49-37_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/10/PHOTO-2019-10-22-16-14-58-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/11/PHOTO-2019-11-23-16-13-35-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/IMG-20190901-WA0002-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/07/vivek-Oberoi-300x300.jpeg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/11/PHOTO-2019-11-25-12-34-58-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/IMG-20190902-WA0012-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/IMG-20190902-WA0011-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/06/IMG-20190525-WA0021-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/06/IMG-20190618-WA0009-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/06/IMG-20190618-WA0007-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/07/IMG-20190724-WA0004-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/06/IMG-20190618-WA0008-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/06/PHOTO-2019-06-21-16-14-17-1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/09/Roshan-300x300.jpeg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/PHOTO-2019-05-03-09-33-49_2-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/PHOTO-2019-05-03-09-33-49-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/PHOTO-2019-05-03-09-33-49_4-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/PHOTO-2019-05-03-09-33-49_3-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-52-15-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/PHOTO-2019-05-03-09-33-49_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-03-18-31-58_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-52-13-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/IMG-20210107-WA0033-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-03-18-31-57-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-03-18-31-57_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-58-42_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/IMG-20210107-WA0032-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-58-43-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-58-42-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-58-42-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/01/PHOTO-2020-01-21-15-50-54-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/shridhar-copy-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/IMG-20210107-WA0031-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-52-14_1-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-12-10-52-14-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/Aakash-mehta-copy-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-03-18-31-58-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/02/PHOTO-2020-02-13-17-01-30-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2021/01/IMG-20210107-WA0034-300x300.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/01/2-300x108.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2018/11/16_1-300x108.jpg" alt="a">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2020/11/Sonu-Nigam-3-300x169.jpg" alt="a">
+        </div>
+    </div>
+    <div class="cont9">
+        <div class="take">
+            <h2>Take Expert Advice to Book an Artist</h2>
+            <p>CALL US & TALK TO EXPERT TO HELP PLAN YOUR ENTERTAINMENT</p>
+        </div>
+        <button onclick="go_to_new_page()" class="submit">SUBMIT CELEBRITY REQUIREMENTS</button>
+        <script>
+            function go_to_new_page(){
+                location.href="./p4hirecelebrity.html"
+            }
+        </script>
+    </div>
+    <div class="cont10">
+        <div class="impnote">
+            <h3>Important <span> Note</span></h3>
+            <p>A listing or profile on this website does not imply an agency affiliation or endorsement by the talent. We do not claim to be the agency or management for any celebrity or artist on this site. Book my Artist is a booking agency for paid events only. We do not handle requests for donation of time or media requests for interviews, and cannot provide celebrity contact information</p>
+        </div>
+        <div class="quicklink">
+            <h3>Quick <span> Links</span></h3>
+            <div>About Us</div>
+            <div>Our Services</div>
+            <div>Client Reviews</div>
+            <div>Contact US</div>
+            <div>Our YouTube Channel</div>
+        </div>
+        <div class="artcategory">
+            <h3>Artist<span> Category</span></h3>
+            <div>Bollywood Celebrity</div>
+            <div>Bollywood Singers</div>
+            <div>Motivational Speakers</div>
+            <div>Punjabi Singers</div>
+            <div>TV Celebrities</div>
+            <div>Celebrity Anchors</div>
+            <div>Stand-up Comedians</div>
+            <div>Reality TV Personalities</div>
+        </div>
+        <div class="followus">
+            <h3>Follow <span> Us</span></h3>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2018, Book My Artist. All Right Reserved.</p>
+        <div><span>Privacy Policy</span> - <span>Disclaimer</span> - <span>Terms Of Use</span></div>
+    </div>
+</body>
+</html>

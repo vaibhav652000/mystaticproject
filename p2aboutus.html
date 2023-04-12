@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+    
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: white;
+    z-index: 1;
+}
+.left_logo img{
+    width: 140px;
+    height: 80px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight:600;
+    margin-left: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar div a{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+.navbar div a:hover{
+    color:rgb(233, 104, 104);
+
+}
+.right_logo{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight:600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 150px;
+}
+.right_logo div{
+    padding-right: 22px;
+}
+.nav .fa-sharp{
+    color:rgb(233, 104, 104);
+}
+.nav .fa-sharp:hover{
+    color: yellowgreen;
+}
+.nav .fa-brands{
+    font-size: 20px;
+    font-weight: bolder;
+    color:rgb(233, 104, 104);
+}
+.nav .fa-brands:hover{
+    color: yellowgreen;
+    
+}
+.auhead{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+.auhead h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 3px 5px gray;
+}
+.auhead span{
+    color:  rgb(233, 104, 104) ;
+}
+.auhead p{
+    font-size: 15px;
+    text-align: justify;
+    padding: 20px 50px;
+}
+.auteam{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:  rgb(233, 104, 104) ;
+    padding-left:50px ;
+    text-shadow: 0px 3px 5px gray;
+}
+.auphoto img{
+    width: 300px;
+    height: 300px;
+    border: 5px double orangered;
+    border-radius: 50%;
+    margin-top: 30px;
+    transition: transform 1s;
+    text-align: justify;
+    margin-left: 40px;
+}
+.auphoto img:hover{
+    border: 6px double cyan;
+    transform:scale(1.2,1.2);
+}
+.auname span{
+    color: black;
+    padding-right: 165px;
+    padding-left: 150px;
+}
+.aumiddle h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:  rgb(233, 104, 104) ;
+    padding-left:50px ;
+    text-shadow: 0px 3px 5px gray;
+    padding-bottom: 20px;
+}
+.aumiddle p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+}
+.aumiddle h6{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding-left: 80px; 
+}
+.aumiddle span{
+    color:  rgb(233, 104, 104) ;
+}
+.aumiddle div{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding-left: 95px; 
+    padding-right: 50px;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+.cont9{
+    width: 100%;
+    height: 22vh;
+    background: linear-gradient(rgba(166, 255, 0,0.8),rgba(15, 206, 15,0.9));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.take{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;            
+    line-height: 35px;
+    padding-left: 40px;
+}
+.submit{
+    width: 35%;
+    height: 9vh;
+    color: white;
+    margin-right: 40px;
+    border: 1px solid ;
+    border-radius: 50px;
+    background: transparent;
+}
+.cont9 .submit:hover{
+    background-color: white;
+    color: rgb(233, 104, 104);
+}
+.cont10{
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(19, 18, 18,0.9),rgba(17, 16, 16,0.8)),url("https://www.halton.com/wp-content/uploads/2020/05/Concert_hall_rock_concert-1366x668.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cont10>.impnote{
+    width: 30%;
+    height: 70%;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 25px;
+    text-align: justify;
+    font-size: 15px;
+}
+.impnote>h3{
+    padding-bottom: 15px;
+}
+.impnote>h3>span{
+    color: rgb(164, 235, 57);    
+}
+.cont10>.quicklink{
+    width: 15%;
+    height: 70%;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+}
+.quicklink>h3{
+    padding-bottom: 15px;
+}
+.quicklink>h3>span{
+    color: rgb(164, 235, 57);
+}
+.cont10 .quicklink div:hover{
+    color: rgb(233, 104, 104);
+    cursor: pointer;
+}
+.cont10>.artcategory{
+    width: 15%;
+    height: 70%;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+}
+.artcategory>h3{
+    padding-bottom: 15px;
+}
+.artcategory>h3>span{
+    color: rgb(164, 235, 57);
+}
+.cont10 .artcategory div:hover{
+    color: rgb(233, 104, 104);
+    cursor: pointer;
+}
+.cont10>.followus{
+    width: 18%;
+    height: 70%;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+}
+.followus>h3{
+    padding-bottom:15px;
+}
+.followus>h3>span{
+    color: rgb(164, 235, 57);
+}
+.cont10 .followus div{
+    font-size:xx-large;
+    color: white;
+    cursor: pointer;
+}
+.cont10 .followus div .fa-brands:hover{
+    color: rgb(233, 104, 104);
+    cursor: pointer;
+}
+.footer{
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+.footer span:hover{
+    color: rgb(233, 104, 104);
+}
+</style>
+</head>
+<body>
+    <div class="nav">
+        <div class="left_logo"><img src="https://www.bookmyartistindia.com/wp-content/themes/bookmyartist/images/logo.png" alt="abc"></div>
+        <div class="navbar">
+            <div> <a href="index.html">Home</a></div>
+                <div><a href="p2aboutus.html">About Us</a></div>
+                <div> <a href="p3eventgallery.html">Event Gallery</a></div>
+                <div><a href="p4hirecelebrity.html">Hire a Celebrity</a></div>
+        </div>
+        <div class="right_logo">
+            <div class="phone"><i class="fa-sharp fa-solid fa-phone"></i>&nbsp;Call</div>
+            <div class="whatsapp"><i class="fa-brands fa-whatsapp"></i>&nbsp;Whatsapp</div>
+        </div>
+    </div>
+    <div class="auhead">
+        <h1>India’s Finest <span>Celebrity Artist Management & Booking </span>Platform</h1>
+        <p>Founded in 2013, Book My Artist is a pan-India Artist Management and Artist Booking Platform with the finest of Indian talent from the entertainment industry. Book My Artist represents a mixture of leading and top-tier artists covering singers, musicians, Bollywood celebrities and entertainment performers for all kinds of events. We believe in providing our clients with the best of services in online artist booking in India. At Book My Artist, we believe in making your event a great success with our top-notch Artist Booking services only to make your special day more awesome.</p>
+        <p>Whether you are planning a grand entry with your favorite star, or having a Bollywood star perform at your wedding, or thinking of booking a famous singer for a college fest, we at Book My Artist will ensure you get to book the artist of your choice without any hassle or confusion during the process. As an online celebrity booking platform, we provide the easiest steps for you to book any artist from our website. We facilitate our clients with specialized settings and event-specific entertainment elements that will make their special day a happening and memorable occasion! As the best Artist And Celebrity Management Company in India, we have managed some of the biggest artists in the country and worked on the most revered festivals and events for our clients. When it comes to us handling your event and managing your event with our industry-specific expertise, we will only serve unparalleled services which meet all of your expectations.</p>
+        <p>Through our artist booking and event management portal, we also hold strong expertise in managing custom-designed programmes for corporate, colleges and clubs. With our holistic services in booking an artist we take care of everything from step 1, that is, to provide you with a quote from the artist, to concluding your event without any fuss. Our approach is to make sure our clients get the best aid in Artist Booking Services in India. And, working in the same vein, we leverage our years old experience in the Entertainment Industry to guide you with the best Artist Management Services for your special event. You can easily browse through a vast list of professional event entertainers, famous singers, actors and performers who are just a click away for your event’s success. Our online and phone-in support team will always be there to make sure all your concerns and expectations are being met with the optimum quality services by our highly-motivated Artist Management team. Not only is Book My Artist the Best Artist Booking Website in India, but it is also the Most Used Portal for Booking Artists online. Our motto is to deliver each event’s unique character with the support of pristine execution and perfect management throughout the course of an event!</p>
+    </div>
+    <div class="auteam">
+        <h1>Meet Our Team</h1>
+        <div class="auphoto">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/yogesh.jpg" alt="1">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/abhishake.jpg" alt="1">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/rohit.jpg" alt="1">
+            <img src="https://www.bookmyartistindia.com/wp-content/uploads/2019/05/punnet.jpg" alt="1">
+        </div>
+        <div class="auname">
+            <span>Yogesh</span><span>Abhishek</span><span>Rohit</span><span>Puneet</span>
+        </div>
+    </div>
+    <div class="aumiddle">
+        <h1>Why Book My Artist</h1>
+        <p>Book My Artist is the best artist booking platform in India because we believe in a perfect amalgamation of comfort, ease of browsing through a diversity of artists, ethical professionalism, flawless management and coordination while working for each of our clients. We know how important your event is to you and to bring it to its desired success our team will ensure you only get the best event and artist management services. Our huge list of professional singers, Bollywood celebrities, live band, and televison celebrities is what makes our website able to serve as the best artist booking platform for your next event. As India’s best and most used Event and Artist Management Company, we are always at our toes to gradually improvise our services and tweak our efforts in order to meet your expectations in all of the aspects of our artist management and booking facilities, and this is what makes us different from the other alternatives you might find online. Whenever you have a reason to celebrate, we will make sure your event is well taken care of from its commencement to its conclusion. And whatever be the nature of our services you avail from us, we promise to deliver only the best in the market. Why so? Let us show you what makes us stand apart from others:</p>
+        <h6>1. <span> Browse Celebrities and Professional Entertainers With Just a Simple Click:</span></h6>
+        <div>You name the celebrities, and we have them on our website! From celebrity appearances at private celebrations like weddings and parties to brand endorsement by B-town actors, Book my artist is a one stop-shop for all artists’ management requirements. Besides this, we have got famous singers, musicians, live bands, and professional entertainers on-board with us. With our extensive list of celebrities and performers, you will easily be able to find your choice of artist with just one click. So, whether you have an upcoming product launch, anniversary party, wedding, inaugurations, corporate event or a birthday celebration, we will be the happiest to help you get the best artist for your special gathering.</div>
+        <h6>2. <span> Hassle Free Artist Booking</span></h6>
+        <div>Booking an artist online for your event may not be an easy thing if you don’t know the intricacies of the entire process. But, we at Book My Artist make it extremely easy for you with the support of cutting edge technology at hand, Safe Transaction flows, and unparalleled Artist Management prowess in the entertainment industry. From finding the right artist, booking them online, getting the prices till the artist’s appearance at your event, we are always ensuring that our clients have a smooth and hassle free experience at each and every step in our provided services.</div>
+        <h6>3. <span> Guaranteed Best Prices</span></h6>
+        <div>While trying to figure out how much you can spend on an entertainment performance/appearance for your event, we make sure you get through details of all expense that you’ll have to cover. We at Book My Artist believe in transparency and client-satisfaction when it comes to providing the best services in their set-budget. And in doing so, our website has been designed in such a way that you easily get the best offer from the artist which starts with getting an instant quote from our artist manager. At Book My Artist, there is no extra or hidden fee that you didn’t budget for.</div>
+        <h6>4. <span> Professional Artist managers</span></h6>
+        <div>As India’s Top Artist Management Company we take our work more than seriously! We have professional artists managers in our team who work with an ardent approach to help you get only the best deals that align with your event’s date, venue, duration, and of course, your budget! We are committed to provide only the best and high quality entertainers whenever there is a great cause to celebrate! As the most-liked celebrity management firm, our key to success lies in our incessant efforts and gradual improvisation in bridging the gap between a host and an artist with a smooth exchange of trust, reliability and comfort accompanied with our effective and transparent artist managing services.</div>
+    </div>
+    <div class="cont9">
+        <div class="take">
+            <h2>Take Expert Advice to Book an Artist</h2>
+            <p>CALL US & TALK TO EXPERT TO HELP PLAN YOUR ENTERTAINMENT</p>
+        </div>
+        <button onclick="go_to_new_page()" class="submit">SUBMIT CELEBRITY REQUIREMENTS</button>
+        <script>
+            function go_to_new_page(){
+                location.href="./p4hirecelebrity.html"
+            }
+        </script>
+    </div>
+    <div class="cont10">
+        <div class="impnote">
+            <h3>Important <span> Note</span></h3>
+            <p>A listing or profile on this website does not imply an agency affiliation or endorsement by the talent. We do not claim to be the agency or management for any celebrity or artist on this site. Book my Artist is a booking agency for paid events only. We do not handle requests for donation of time or media requests for interviews, and cannot provide celebrity contact information</p>
+        </div>
+        <div class="quicklink">
+            <h3>Quick <span> Links</span></h3>
+            <div>About Us</div>
+            <div>Our Services</div>
+            <div>Client Reviews</div>
+            <div>Contact US</div>
+            <div>Our YouTube Channel</div>
+        </div>
+        <div class="artcategory">
+            <h3>Artist<span> Category</span></h3>
+            <div>Bollywood Celebrity</div>
+            <div>Bollywood Singers</div>
+            <div>Motivational Speakers</div>
+            <div>Punjabi Singers</div>
+            <div>TV Celebrities</div>
+            <div>Celebrity Anchors</div>
+            <div>Stand-up Comedians</div>
+            <div>Reality TV Personalities</div>
+        </div>
+        <div class="followus">
+            <h3>Follow <span> Us</span></h3>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2018, Book My Artist. All Right Reserved.</p>
+        <div><span>Privacy Policy</span> - <span>Disclaimer</span> - <span>Terms Of Use</span></div>
+    </div>
+</body>
+</html>
